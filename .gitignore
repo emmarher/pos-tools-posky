@@ -1,0 +1,22 @@
+# ── Claves criptográficas (NUNCA versionar) ────────────────────────
+keys/
+
+# ── Licencias emitidas (outputs sensibles) ───────────────────────────
+out/
+
+# ── Entorno local (passphrase nunca en repo) ─────────────────────────
+.env
+.env.local
+
+# ── Dependencias (futuro package.json) ───────────────────────────────
+node_modules/
+
+# ── Logs ─────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── OS / editores ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

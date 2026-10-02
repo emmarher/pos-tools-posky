@@ -1,1 +1,24 @@
-{}
+{
+  "LIC-2026-000001": {
+    "customer": "Cliente Cidesi",
+    "license_key": "DEMO-0002",
+    "branch": "sucursal-cidesi",
+    "current_expires": "2027-10-02T18:13:37.215Z",
+    "current_seats": 3,
+    "status": "active",
+    "history": [
+      {
+        "action": "issued",
+        "expires": "2027-10-02T18:13:37.215Z",
+        "seats": 3,
+        "features": [
+          "inventory",
+          "garage",
+          "reports"
+        ],
+        "issued": "2026-10-02",
+        "at": "2026-10-02T18:13:37.239Z"
+      }
+    ]
+  }
+}

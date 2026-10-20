@@ -70,3 +70,14 @@ manualmente en la terminal.
   familia **MAIN** contra un `pos-server` real → `POST /license/upload` → `200`; BD con
   `max_devices`, `license_state` y anti-rollback correctos; `POST /auth/login` → `200`.
   Hasta ahora solo se había probado la familia *trial*.
+
+### Merge
+
+- Se integró el commit remoto `dbea003` ("licenseLib lee las claves desde `../keys`").
+  Los dos conflictos se resolvieron **a favor de la versión local**:
+  - `lib/licenseLib.js`: la ruta de claves ya no es fija → `paths.keysDir()`
+    (`POSKY_KEYS_DIR` → `$POSKY_HOME/keys` → `tools-posky/keys`), un superconjunto del fix
+    remoto, que además acepta el sobre JSON de Node.
+  - `registry.json`: se mantiene el **borrado** (el registry vive cifrado en
+    `$POSKY_HOME/registry.json.enc`). El registro que traía el remoto se conserva en el
+    registry cifrado: se restaura el archivo plano y `posky doctor --migrar` lo migra.

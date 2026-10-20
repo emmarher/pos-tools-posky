@@ -4,11 +4,18 @@ keys/
 # ── Licencias emitidas (outputs sensibles) ───────────────────────────
 out/
 
+# ── Registry de licencias (contiene datos de clientes) ───────────────
+# El registry vive CIFRADO en $POSKY_HOME/registry.json.enc (por defecto
+# ~/.pos-posky/registry.json.enc). Este archivo en claro es el heredado:
+# se migra automáticamente y no debe volver al repo.
+registry.json
+registry.json.migrated
+
 # ── Entorno local (passphrase nunca en repo) ─────────────────────────
 .env
 .env.local
 
-# ── Dependencias (futuro package.json) ───────────────────────────────
+# ── Dependencias ─────────────────────────────────────────────────────
 node_modules/
 
 # ── Logs ─────────────────────────────────────────────────────────────
